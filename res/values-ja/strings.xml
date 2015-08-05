@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="murasyou">村ショウ鯖公式アプリへようこそ!</string>
+    <string name="app_name">村ショウ鯖公式アプリ</string>
+	<string name="information">基本情報</string>
+	<string name="ip">IPアドレス:222.2.87.59</string>
+	<string name="port">ポート:19132</string>
+	<string name="owner">鯖主(オーナー):村ショウ</string>
+	<string name="sites">ウェブサイトへのリンク</string>
+	<string name="community">村ショウ鯖Google+コミュニティ</string>
+	<string name="wiki">村ショウ鯖Wiki</string>
+	<string name="registInMinecraft">このサーバーをMinecraft PEに登録</string>
+	<string name="errMcpeNotInstalled">この端末にMinecraft PEがインストールされていません。\nGoogle Playストアもしくは正規品を販売しているストアからご購入下さい。</string>
+	<string name="errMcpeConfigNotFound">Minecraft PEを一回以上起動して下さい。</string>
+
+	<string name="main">メイン画面</string>
+	<string name="murasyoulaw">村ショウ鯖の法律(ルール)</string>
+	<string name="loading">読み込み中...</string>
+	<string name="errLoad">読み込みに失敗しました。もう一回お試し下さい。</string>
+	
+	<string name="menu">メニュー</string>
+</resources>

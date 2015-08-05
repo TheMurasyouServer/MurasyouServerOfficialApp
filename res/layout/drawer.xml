@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent"
+	android:layout_width="300dp"
+	android:background="#FFFFFF"
+	android:id="@+id/drawerBG"
+	android:orientation="vertical"
+	android:layout_gravity="start">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:layout_weight="1.0">
+
+		<ScrollView
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:layout_weight="1.0">
+
+			<include layout="@layout/functions"/>
+
+		</ScrollView>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="@string/registInMinecraft"
+			android:id="@+id/addmcpe"/>
+
+	</LinearLayout>
+<!--
+	<ImageView
+		android:layout_height="110dp"
+		android:layout_width="match_parent"
+		android:src="@drawable/funimg"/>
+-->
+</LinearLayout>
+

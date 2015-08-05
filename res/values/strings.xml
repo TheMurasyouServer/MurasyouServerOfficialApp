@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="copyright">Copyright by nao20010128nao. All rights are reserved. </string>
+    <string name="murasyou">Welcome to murasyou server app!</string>
+    <string name="app_name">Mura syou server Official App</string>
+	<string name="information">Informations</string>
+	<string name="ip">IP Addess:222.2.87.59</string>
+	<string name="port">Port:19132</string>
+	<string name="owner">Owner:Mura syou</string>
+	<string name="sites">Our Website links</string>
+	<string name="community">Mura syou server Google+ community</string>
+	<string name="wiki">Mura syou server wiki</string>
+	<string name="registInMinecraft">Add this server in MCPE list</string>
+	<string name="errMcpeNotInstalled">You didn\'t install Minecraft PE on your device.\nPlease install it from Google Play or other genuine apps store.</string>
+	<string name="errMcpeConfigNotFound">Please start Minecraft PE more than one time.</string>
+	
+	<string name="main">Main panel</string>
+	<string name="murasyoulaw">The Law of Mura syou server</string>
+	<string name="loading">Loading...</string>
+	<string name="errLoad">Failed to load. Try again!</string>
+	
+	<string name="menu">Menu</string>
+</resources>

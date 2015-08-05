@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="murasyou">村ツョウ鮪公式アプリへようこそ!</string>
+    <string name="app_name">村ツョウ鮪公式アプリ</string>
+	<string name="owner">鮪主(オーナー):村ショウ</string>
+	<string name="community">村ツョウ鮪Google+コミュニティ</string>
+	<string name="wiki">村ツョウ鮪Wiki</string>
+	<string name="registInMinecraft">このマグロをMinecraft PEに登録</string>
+	
+	<string name="murasyoulaw">村ツョウ鮪の法律(ルール)</string>
+</resources>
