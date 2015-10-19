@@ -5,19 +5,8 @@
 	android:layout_width="match_parent"
 	android:orientation="vertical">
 
-	<android.support.v4.widget.DrawerLayout
-		android:layout_height="match_parent"
-		android:layout_width="match_parent"
-		android:layout_weight="1.0"
-		android:id="@+id/rootDrawer">
-
 		<include
 			layout="@layout/mainframe"/>
-
-		<include
-			layout="@layout/drawer"/>
-
-	</android.support.v4.widget.DrawerLayout>
 
 	<TextView
 		android:layout_height="wrap_content"
