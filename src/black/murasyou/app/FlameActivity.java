@@ -113,7 +113,6 @@ public class FlameActivity extends ActivityGroup{
 		ViewGroup vg=(ViewGroup)findViewById(R.id.activityRoot);
 		removeFromParent(prevDecor);
 		vg.addView(prevDecor=(ViewGroup)localWindow.getDecorView());
-		rootDrawer.invalidate();
 	}
 	public void removeFromParent(View v){
 		if(v!=null)
