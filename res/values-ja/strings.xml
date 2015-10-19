@@ -19,4 +19,12 @@
 	<string name="errLoad">読み込みに失敗しました。もう一回お試し下さい。</string>
 	
 	<string name="menu">メニュー</string>
+
+	<string name="serverState">サーバーの状態</string>
+
+	<string name="shutout">閉鎖中</string><color name="shutout">#ED1A3D</color>
+	<string name="online">オンライン</string><color name="online">#00793D</color>
+	<string name="offline">オフライン</string><color name="offline">#ED1A3D</color>
+	<string name="whitelist">ホワリス</string><color name="whitelist">#FFC40C</color>
+	<string name="share">共有</string>
 </resources>
