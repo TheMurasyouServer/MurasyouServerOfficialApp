@@ -28,9 +28,6 @@ public class MainActivity extends Activity
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-		if(currentInstance.get()!=null){
-			currentInstance.get().finish();
-		}
 		currentInstance=new WeakReference(this);
 		findViewById(R.id.community).setOnClickListener(new View.OnClickListener(){
 				public void onClick(View p){
