@@ -74,5 +74,20 @@
 		android:layout_width="wrap_content"
 		android:text="@string/serverState"/>
 
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:text="Pinging..."
+		android:id="@+id/serverstat"/>
+
+	<Button
+		style="?android:attr/buttonBarButtonStyle"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="@string/checkAgain"
+		android:id="@+id/check"
+		android:visibility="gone"/>
+
 </LinearLayout>
 

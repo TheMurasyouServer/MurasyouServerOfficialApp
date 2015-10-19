@@ -20,6 +20,10 @@
 	<string name="errLoad">Failed to load. Try again!</string>
 	
 	<string name="menu">Menu</string>
+	<string name="checkAgain">Check Again</string>
+	
+	<string name="str_ip">222.2.87.59</string>
+	<integer name="int_port">19132</integer>
 	
 	<string name="serverState">Server Status</string>
 	
