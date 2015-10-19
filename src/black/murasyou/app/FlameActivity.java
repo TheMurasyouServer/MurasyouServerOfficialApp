@@ -11,6 +11,7 @@ import android.content.*;
 import android.support.v4.widget.*;
 
 public class FlameActivity extends ActivityGroup{
+	static Class prevClass;
 	LocalActivityManager lam=getLocalActivityManager();
 	ViewGroup prevDecor;Window localWindow;
 	DrawerLayout rootDrawer;
@@ -21,7 +22,10 @@ public class FlameActivity extends ActivityGroup{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.root);
 		rootDrawer=(DrawerLayout)findViewById(R.id.rootDrawer);
-		change(MainActivity.class);
+		if(prevClass==null)
+			change(MainActivity.class);
+		else
+			change(prevClass);
     }
 
 	@Override
@@ -113,6 +117,7 @@ public class FlameActivity extends ActivityGroup{
 		ViewGroup vg=(ViewGroup)findViewById(R.id.activityRoot);
 		removeFromParent(prevDecor);
 		vg.addView(prevDecor=(ViewGroup)localWindow.getDecorView());
+		prevClass=clazz;
 	}
 	public void removeFromParent(View v){
 		if(v!=null)
