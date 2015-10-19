@@ -32,7 +32,7 @@ public class MainActivity extends Activity
 			});
 	}
 	private void share(String url){
-		startActivity(new Intent().setData(Uri.parse(url)).setAction(Intent.ACTION_VIEW));
+		startActivity(Intent.createChooser(new Intent().setData(Uri.parse(url)).setAction(Intent.ACTION_VIEW),getResources().getString(R.string.share)));
 	}
 	@Override
 	protected void attachBaseContext(Context newBase){

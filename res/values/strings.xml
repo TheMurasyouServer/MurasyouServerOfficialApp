@@ -27,4 +27,5 @@
 	<string name="online">Online</string><color name="online">#00793D</color>
 	<string name="offline">Offline</string><color name="offline">#ED1A3D</color>
 	<string name="whitelist">Whitelist</string><color name="whitelist">#FFC40C</color>
+	<string name="share">Share</string>
 </resources>
