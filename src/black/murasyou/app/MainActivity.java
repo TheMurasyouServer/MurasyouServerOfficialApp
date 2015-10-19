@@ -22,7 +22,7 @@ public class MainActivity extends Activity
         setContentView(R.layout.main);
 		findViewById(R.id.community).setOnClickListener(new View.OnClickListener(){
 				public void onClick(View p){
-					share("https://plus.google.com/app/basic/communities/107155705374970174018");
+					share("https://plus.google.com/communities/107155705374970174018");
 				}
 			});
 		findViewById(R.id.wiki).setOnClickListener(new View.OnClickListener(){
