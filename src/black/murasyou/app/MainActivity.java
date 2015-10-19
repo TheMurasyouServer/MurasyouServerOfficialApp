@@ -17,7 +17,7 @@ import java.lang.ref.*;
 
 public class MainActivity extends Activity
 {
-	static int res_str,res_col;
+	static int res_str=R.string.loading,res_col=android.R.color.black;
 	static QueryResponseUniverse resp;
 	static boolean shutout=false,allowed=true,workerworking=false;
 	static WeakReference<TextView> stat;
