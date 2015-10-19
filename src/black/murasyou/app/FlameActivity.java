@@ -15,7 +15,7 @@ public class FlameActivity extends ActivityGroup{
 	LocalActivityManager lam=getLocalActivityManager();
 	ViewGroup prevDecor;Window localWindow;
 	DrawerLayout rootDrawer;
-	File file=new File(Environment.getExternalStorageDirectory()+"/games/com.mojang/minecraftpe/external_servers.txt");
+	File file=new File(Environment.getExternalStorageDirectory(),"/games/com.mojang/minecraftpe/external_servers.txt");
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		// TODO: Implement this method
