@@ -20,56 +20,50 @@ public class FlameActivity extends ActivityGroup{
 		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.root);
-		findViewById(R.id.addmcpe).setOnClickListener(new View.OnClickListener(){
-				public void onClick(View p){
-					if(!isMcpeInstalled()){
-						Toast.makeText(FlameActivity.this,R.string.errMcpeNotInstalled,Toast.LENGTH_LONG).show();
-						return;
-					}
-					if(!isMcpeConfigAvaliable()){
-						Toast.makeText(FlameActivity.this,R.string.errMcpeConfigNotFound,Toast.LENGTH_LONG).show();
-						return;
-					}
-					if(alreadyAddedInList()){
-						return;
-					}
-					try{
-						FileWriter fw = new FileWriter(file, true);
-						fw.append("900:mura syou server:222.2.87.59:19132\n");
-						fw.close();
-					}catch (IOException e){
-						e.printStackTrace();
-					}
-				}
-			});
-		findViewById(R.id.funcMain).setOnClickListener(new View.OnClickListener(){
-				public void onClick(View p){
-					change(MainActivity.class);
-				}
-			});
-		findViewById(R.id.funcLaw).setOnClickListener(new View.OnClickListener(){
-				public void onClick(View p){
-					change(LawViewerActivity.class);
-				}
-			});
-		findViewById(R.id.drawerBG).setBackground(resolveBackground());
-		rootDrawer=(DrawerLayout)findViewById(R.id.rootDrawer);
-		rootDrawer.setWillNotCacheDrawing(true);
-		rootDrawer.setDrawingCacheEnabled(false);
 		change(MainActivity.class);
     }
-	private Drawable resolveBackground(){
-		if(r(false))return getWindow().getDecorView().getBackground();
-		Drawable tmp=null;ViewGroup tmp2=(ViewGroup)findViewById(android.R.id.content);
-		while(tmp==null){
-			Log.d("dbg","tmp:"+tmp+";tmp2:"+tmp2+";tmp2.getId():"+tmp2.getId());
-			tmp=tmp2.getBackground();
-			tmp2=(ViewGroup)tmp2.getParent();
-		}
-		Log.d("dbg","tmp:"+tmp+";tmp2:"+tmp2);
-		return tmp;
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		menu.add(0,0,0,R.string.main);
+		menu.add(0,1,0,R.string.murasyoulaw);
+		menu.add(0,2,0,R.string.registInMinecraft);
+		return true;
 	}
-	private <T> T r(T v){return v;}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO: Implement this method
+		switch(item.getItemId()){
+			case 0:
+				change(MainActivity.class);
+				break;
+			case 1:
+				change(LawViewerActivity.class);
+				break;
+			case 2:
+				if(!isMcpeInstalled()){
+					Toast.makeText(FlameActivity.this,R.string.errMcpeNotInstalled,Toast.LENGTH_LONG).show();
+					break;
+				}
+				if(!isMcpeConfigAvaliable()){
+					Toast.makeText(FlameActivity.this,R.string.errMcpeConfigNotFound,Toast.LENGTH_LONG).show();
+					break;
+				}
+				if(alreadyAddedInList()){
+					break;
+				}
+				try{
+					FileWriter fw = new FileWriter(file, true);
+					fw.append("900:mura syou server:222.2.87.59:19132\n");
+					fw.close();
+				}catch (IOException e){
+					e.printStackTrace();
+				}
+				break;
+		}
+		return true;
+	}
 	private boolean isMcpeInstalled(){
 		try{
 			getPackageManager().getPackageInfo("com.mojang.minecraftpe", PackageManager.GET_ACTIVITIES);
@@ -91,9 +85,10 @@ public class FlameActivity extends ActivityGroup{
 			br=new BufferedReader(fr);
 			while(true){
 				String s=br.readLine();
+				if(br==null)break;
 				if(s.endsWith(":222.2.87.59:19132"))return true;
-				if(r(false))break;
 			}
+			return false;
 		}catch(Throwable ex){
 			return false;
 		}finally{
@@ -104,17 +99,7 @@ public class FlameActivity extends ActivityGroup{
 
 			}
 		}
-		return false;
 	}
-	@Override
-	protected void attachBaseContext(Context newBase){
-		// TODO: Implement this method
-		if(CustomApplication.currentApplication.get()!=null)
-			super.attachBaseContext(CustomApplication.currentApplication.get());
-		else 
-			super.attachBaseContext(newBase);
-	}
-
 	@Override
 	public void change(Class<? extends Activity> clazz){
 		// TODO: Implement this method
