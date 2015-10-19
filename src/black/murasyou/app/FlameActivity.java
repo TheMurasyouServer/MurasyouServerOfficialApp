@@ -20,6 +20,7 @@ public class FlameActivity extends ActivityGroup{
 		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.root);
+		rootDrawer=(DrawerLayout)findViewById(R.id.rootDrawer);
 		change(MainActivity.class);
     }
 
