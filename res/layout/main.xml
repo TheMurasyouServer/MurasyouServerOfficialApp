@@ -63,5 +63,16 @@
 		android:text="@string/wiki"
 		android:id="@+id/wiki"/>
 
+	<View
+		android:background="?android:attr/dividerVertical"
+		android:layout_height="1dp"
+		android:layout_width="match_parent"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:text="@string/serverState"/>
+
 </LinearLayout>
 
