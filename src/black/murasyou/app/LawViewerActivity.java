@@ -3,7 +3,6 @@ import android.app.*;
 import android.os.*;
 import java.io.*;
 import android.widget.*;
-import javax.crypto.*;
 
 public class LawViewerActivity extends Activity{
 	@Override
