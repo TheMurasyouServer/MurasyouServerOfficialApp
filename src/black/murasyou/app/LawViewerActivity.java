@@ -3,6 +3,7 @@ import android.app.*;
 import android.os.*;
 import java.io.*;
 import android.widget.*;
+import javax.crypto.*;
 
 public class LawViewerActivity extends Activity{
 	@Override
@@ -13,19 +14,26 @@ public class LawViewerActivity extends Activity{
 		setContentView(R.layout.law);
 		new AsyncTask<Void,Void,String>(){
 			public String doInBackground(Void[] a){
+				char[]buffer=new char[1024];
+				InputStreamReader isr=null;
 				try{
-					char[]buffer=new char[1024];
-					StringWriter sw=new StringWriter();
-					InputStreamReader isr=new InputStreamReader(getAssets().open("law"));
+					StringBuilder sw=new StringBuilder();
+					isr=new InputStreamReader(getAssets().open("law"));
 					while (true){
 						int data=isr.read(buffer);
 						if(data<=0)break;
-						sw.append(new String(buffer,0,data));
+						sw.append(buffer,0,data);
 					}
-					isr.close();
 					return sw.toString();
 				}catch (IOException e){
 					return null;
+				}finally{
+					try {
+						if (isr != null)
+							isr.close();
+					} catch (IOException e) {
+						
+					}
 				}
 			}
 			public void onPostExecute(String result){
