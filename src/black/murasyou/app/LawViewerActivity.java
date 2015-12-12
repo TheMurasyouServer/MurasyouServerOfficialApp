@@ -14,7 +14,7 @@ public class LawViewerActivity extends Activity{
 		new AsyncTask<Void,Void,String>(){
 			public String doInBackground(Void[] a){
 				try{
-					char[]buffer=new char[8000000];
+					char[]buffer=new char[1024];
 					StringWriter sw=new StringWriter();
 					InputStreamReader isr=new InputStreamReader(getAssets().open("law"));
 					while (true){
