@@ -26,40 +26,10 @@
         <activity
             android:label="@string/app_name"
             android:name=".MainActivity" >
-            <!--<intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
         </activity>
 		<activity
             android:label="@string/app_name"
             android:name=".LawViewerActivity" >
-		</activity>
-		
-		<!--ActivityGroups-->
-		<activity
-            android:label="@string/app_name"
-            android:name=".PagerFlameActivity"
-			android:theme="@style/NoShadow"
-			android:enabled="false">
-            <intent-filter >
-				<action android:name="android.intent.action.MAIN" />
-
-				<category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-		<activity
-            android:label="@string/app_name"
-            android:name=".PagerFlameActivity$PagerCore" >
-		</activity>
-		<activity
-            android:label="@string/app_name"
-            android:name=".PagerFlameActivity$PagerCore$MenuActivity" >
-		</activity>
-		<activity
-            android:label="@string/app_name"
-            android:name=".MenuActivity" >
 		</activity>
     </application>
 </manifest>
