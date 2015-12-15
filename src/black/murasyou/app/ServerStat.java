@@ -8,7 +8,7 @@ public class ServerStat
 	public static boolean isShutout(){
 		URL url;
 		try {
-			url=new URL("http://nao20010128nao.github.io/murasyou/status.txt");
+			url=new URL("https://github.com/TheMurasyouServer/MurasyouServerAppExternalData/raw/master/status.txt");
 		} catch (MalformedURLException e) {
 			return false;
 		}
