@@ -14,7 +14,7 @@
 	<string name="errMcpeNotInstalled">You didn\'t install Minecraft PE on your device.\nPlease install it from Google Play or other genuine apps store.</string>
 	<string name="errMcpeConfigNotFound">Please start Minecraft PE more than one time.</string>
 	
-	<string name="main">Main panel</string>
+	<string name="main">Main Screen</string>
 	<string name="murasyoulaw">The Law of Murasyou server</string>
 	<string name="loading">Loading...</string>
 	<string name="errLoad">Failed to load. Try again!</string>
