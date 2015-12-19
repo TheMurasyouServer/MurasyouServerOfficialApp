@@ -4,7 +4,7 @@
     <string name="murasyou">Welcome to murasyou server app!</string>
     <string name="app_name">Murasyou server Official App</string>
 	<string name="information">Informations</string>
-	<string name="ip">IP Addess:222.2.87.59</string>
+	<string name="ip">IP Addess:murasyou.dip.jp</string>
 	<string name="port">Port:19132</string>
 	<string name="owner">Owner:Murasyou</string>
 	<string name="sites">Our Website links</string>
@@ -21,7 +21,7 @@
 	
 	<string name="menu">Menu</string>
 	
-	<string name="str_ip">222.2.87.59</string>
+	<string name="str_ip">murasyou.dip.jp</string>
 	<integer name="int_port">19132</integer>
 	
 	<string name="serverState">Server Status</string>
