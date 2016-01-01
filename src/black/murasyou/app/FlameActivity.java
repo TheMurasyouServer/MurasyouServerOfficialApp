@@ -105,7 +105,6 @@ public class FlameActivity extends ActivityGroup{
 			}
 		}
 	}
-	@Override
 	public void change(Class<? extends Activity> clazz){
 		// TODO: Implement this method
 		try{
