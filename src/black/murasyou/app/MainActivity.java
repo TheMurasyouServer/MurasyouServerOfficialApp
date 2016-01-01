@@ -40,6 +40,18 @@ public class MainActivity extends Activity
 				}
 			});
 		stat=new WeakReference(findViewById(R.id.serverstat));
+		stat.get().setOnClickListener(new View.OnClickListener(){
+				public void onClick(View p){
+					if(isWisecraftInstalled()&((res_str==R.string.online)|(res_str==R.string.whitelist))){
+						startActivity(new Intent()
+									  .setClassName("com.nao20010128nao.Wisecraft",".api.RequestedServerInfoActivity")
+									  .setAction("com.nao20010128nao.Wisecraft.SERVER_INFO")
+									  .addCategory(Intent.CATEGORY_LAUNCHER)
+									  .putExtra("com.nao20010128nao.Wisecraft.SERVER_IP",getResources().getString(R.string.str_ip))
+									  .putExtra("com.nao20010128nao.Wisecraft.SERVER_PORT",getResources().getIntArray(R.integer.int_port)));
+					}
+				}
+			});
 		if(!workerworking){
 			new Thread(){
 				public void run(){
@@ -85,6 +97,15 @@ public class MainActivity extends Activity
 	private void share(String url){
 		startActivity(Intent.createChooser(new Intent().setData(Uri.parse(url)).setAction(Intent.ACTION_VIEW),getResources().getString(R.string.share)));
 	}
+	private boolean isWisecraftInstalled(){
+		try{
+			getPackageManager().getPackageInfo("com.nao20010128nao.Wisecraft", PackageManager.GET_ACTIVITIES);
+			return true;
+		}catch (PackageManager.NameNotFoundException e){
+			e.printStackTrace();
+			return false;
+		}
+	}
 	@Override
 	protected void attachBaseContext(Context newBase){
 		// TODO: Implement this method
@@ -93,5 +114,4 @@ public class MainActivity extends Activity
 		else 
 			super.attachBaseContext(newBase);
 	}
-
 }
