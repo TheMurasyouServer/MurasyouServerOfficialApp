@@ -56,13 +56,6 @@
 		android:text="@string/community"
 		android:id="@+id/community"/>
 
-	<Button
-		style="?android:attr/buttonBarButtonStyle"
-		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
-		android:text="@string/wiki"
-		android:id="@+id/wiki"/>
-
 	<View
 		android:background="?android:attr/dividerVertical"
 		android:layout_height="1dp"
@@ -80,5 +73,6 @@
 		android:layout_width="wrap_content"
 		android:text="Pinging..."
 		android:id="@+id/serverstat"/>
+
 </LinearLayout>
 

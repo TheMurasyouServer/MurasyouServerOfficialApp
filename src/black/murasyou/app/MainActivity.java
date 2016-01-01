@@ -34,11 +34,6 @@ public class MainActivity extends Activity
 					share("https://plus.google.com/communities/107155705374970174018");
 				}
 			});
-		findViewById(R.id.wiki).setOnClickListener(new View.OnClickListener(){
-				public void onClick(View p){
-					share("http://wiki.murasyou.black/");
-				}
-			});
 		stat=new WeakReference(findViewById(R.id.serverstat));
 		stat.get().setOnClickListener(new View.OnClickListener(){
 				public void onClick(View p){
